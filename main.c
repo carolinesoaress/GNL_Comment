@@ -5,7 +5,7 @@
 int main(void)
 {
     // Abre o arquivo para leitura
-    int fd = open("alternate_line_nl_no_nl", O_RDONLY);
+    int fd = open("texto.txt", O_RDONLY);
 
     // Verifica se a abertura do arquivo foi bem-sucedida
     if (fd < 0)
@@ -21,7 +21,7 @@ int main(void)
     while ((line = get_next_line(fd)))
     {
         // Imprime a linha lida
-        printf("%s", line);
+        printf("%s\n", line);
 
         // Libera a memória alocada para a linha
         free(line);
